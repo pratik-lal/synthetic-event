@@ -1,6 +1,6 @@
 import logging
 
-logging.basicConfig(filename='.\\syntheticevent.log',
+logging.basicConfig(filename='synthetic-events/syntheticevent.log',
                     format='%(asctime) %(levelname) %(message)')
 
 
