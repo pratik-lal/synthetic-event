@@ -1,0 +1,19 @@
+2021-08-22 23:58:12,171 - synthetic events - INFO: helloss
+2021-08-23 00:04:47,213 - synthetic events - INFO: helloss
+2021-08-23 00:04:47,213 - synthetic events - INFO: helloss
+2021-08-23 00:10:06,778 - synthetic events - ERROR: An error occurred in generating syslog message.
+Traceback (most recent call last):
+  File "<input>", line 33, in synthetic_event_generator
+TypeError: info() missing 1 required positional argument: 'msg'
+2021-08-23 00:10:06,778 - synthetic events - ERROR: An error occurred in generating syslog message.
+Traceback (most recent call last):
+  File "<input>", line 33, in synthetic_event_generator
+TypeError: info() missing 1 required positional argument: 'msg'
+2021-08-23 00:10:06,780 - synthetic events - ERROR: info() missing 1 required positional argument: 'msg'
+2021-08-23 00:10:06,780 - synthetic events - ERROR: info() missing 1 required positional argument: 'msg'
+2021-08-23 00:11:47,214 - synthetic events - INFO: message: 
+NoneType: None
+2021-08-23 00:11:47,214 - synthetic events - INFO: message: 
+NoneType: None
+2021-08-23 00:11:47,214 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
+2021-08-23 00:11:47,214 - synthetic events - INFO: Syslog message has been sent. Exit code: 0

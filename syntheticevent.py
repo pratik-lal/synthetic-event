@@ -1,6 +1,7 @@
 import os
 import datetime
 import socket
+from logger import logger
 
 
 class SyntheticEvent:
@@ -28,10 +29,12 @@ class SyntheticEvent:
         syslog_command = "echo '{}' | nc -q 1 '{}' '{}'".format(synthetic_event_message, ip_address, port_number)
         try:
             synthetic_event_syslog = os.system(syslog_command)
-            print("Syslog message has been sent. Exit code: {}" .format(synthetic_event_syslog))
+            logger.info("Syslog message has been sent. Exit code: {}" .format(synthetic_event_syslog))
             return synthetic_event_syslog
         except Exception as e:
-            print(e)
+            # exc_info=True captures full stack trace of exception.
+            logger.error("An error occurred in generating syslog message.", exc_info=True)
+            logger.error(e)
 
 
 # Actual arguments for constructor
