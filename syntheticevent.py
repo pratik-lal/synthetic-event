@@ -1,8 +1,4 @@
-#!/usr/bin/python3
-
 import os
-import datetime
-import socket
 from logger import logger
 
 
@@ -37,23 +33,3 @@ class SyntheticEvent:
             # exc_info=True captures full stack trace of exception.
             logger.error("An error occurred in generating syslog message.", exc_info=True)
             logger.error(e)
-
-
-# Actual arguments for constructor
-event_init_time = datetime.datetime.now()
-event_start_time = event_init_time.strftime("%b %d %H:%M:%S")
-event_host_name = socket.gethostname()
-event_syslog_priority = "<999>"
-synthetic_event_name = "Sentinel Synthetic Event"
-event_provider_name = "LogAnalyticsAgent"
-
-# Class object
-SentinelSyntheticEvent = SyntheticEvent(event_init_time, event_start_time, event_host_name, event_syslog_priority,
-                                        synthetic_event_name, event_provider_name)
-
-# Actual arguments for method synthetic_event_generator
-netcat_ip = "127.0.0.1"
-netcat_port = 25224
-
-# Calling synthetic_event_generator() method.
-SentinelSyntheticEvent.synthetic_event_generator(netcat_ip, netcat_port)
