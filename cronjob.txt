@@ -1,0 +1,3 @@
+# Cron job settings. Executes every 5 minutes.
+# crontab -e
+*/5 * * * * cd /home/pratik/synthetic-event/ && /usr/bin/python3 /home/pratik/synthetic-event/main.py
