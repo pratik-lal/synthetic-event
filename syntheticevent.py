@@ -34,6 +34,7 @@ class SyntheticEvent:
         try:
             synthetic_event_syslog = os.system(syslog_command)
             logger.info("Syslog message has been sent. Exit code: {}" .format(synthetic_event_syslog))
+            logger.info("Syslog Message: {}" .format(synthetic_event_message))
             return synthetic_event_syslog
         except Exception as e:
             # exc_info=True captures full stack trace of exception.

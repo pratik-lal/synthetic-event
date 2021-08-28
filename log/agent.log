@@ -1112,3 +1112,10 @@
 2021-08-28 21:02:27,231 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
 2021-08-28 21:13:48,994 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
 2021-08-28 21:13:48,994 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
+2021-08-28 21:20:02,905 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
+2021-08-28 21:25:03,094 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
+2021-08-28 21:30:02,485 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
+2021-08-28 21:34:54,640 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
+2021-08-28 21:34:54,640 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
+2021-08-28 21:35:02,619 - synthetic events - INFO: Syslog message has been sent. Exit code: 0
+2021-08-28 21:35:02,619 - synthetic events - INFO: Syslog Message: <999>Aug 28 21:35:01 pratik-ubuntu LogAnalyticsAgent Sentinel Synthetic Event
