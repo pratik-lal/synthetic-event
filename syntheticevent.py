@@ -19,12 +19,18 @@ class SyntheticEvent:
     We're using tcp protocol with synthetic-event by default. use  nc -u for udp if needed.
     '''
     def synthetic_event_generator(self, ip_address, port_number):
+
+        # Sample syslog event: '<999>Aug 28 17:35:56 pratila-ubuntu LogAnalyticsAgent Sentinel synthetic event'
+        # Syslog message format (BSD-syslog RFC 3164)
+        # priority,datetime in "%b %d %H:%M:%S", hostname, application_name, syslog_message
         synthetic_event_message = str(self.syslog_priority + self.start_time
                                       + " " + self.host_name
                                       + " " + self.provider_name
                                       + " " + self.event_name)
+
         # Example: syslog_command = "echo '{}' | nc -q 1 127.0.0.1 25224" .format(synthetic_event_message)
         syslog_command = "echo '{}' | nc -q 1 '{}' '{}'".format(synthetic_event_message, ip_address, port_number)
+
         try:
             synthetic_event_syslog = os.system(syslog_command)
             logger.info("Syslog message has been sent. Exit code: {}" .format(synthetic_event_syslog))
