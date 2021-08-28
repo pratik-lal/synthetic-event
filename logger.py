@@ -7,7 +7,9 @@ logger.setLevel(logging.DEBUG)
 
 # File handler
 # fh = logging.FileHandler(filename="log/agent.log", mode="a")
-fh = logging.handlers.RotatingFileHandler(filename="log/agent.log", mode="a", maxBytes=1000000, backupCount=10)
+fh = logging.handlers.RotatingFileHandler(filename="log/agent.log", mode="a",
+                                          maxBytes=1000000,
+                                          backupCount=10)
 fh.setLevel(logging.DEBUG)
 
 # log file formatter
